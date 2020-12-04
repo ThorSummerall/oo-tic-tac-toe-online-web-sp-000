@@ -62,10 +62,6 @@ class TicTacToe
 
  def won?
    WIN_COMBINATIONS.each do |win_combination|
-     win_index_1 = win_combination[0]
-     win_index_2 = win_combination[1]
-     win_index_3 = win_combination[2]
-
      position_1 = @board[win_combination[0]]
      position_2 = @board[win_combination[1]]
      position_3 = @board[win_combination[2]]
@@ -75,5 +71,27 @@ class TicTacToe
      end
    end
    return false
+ end
+
+ def full?
+   @board.all? do |index|
+     index == "X" || index == "O"
+   end
+ end
+
+ def draw?
+   if !won? && full?
+     return true 
+   else
+     return false
+   end
+ end
+
+ def over?
+
+ end
+
+ def winner?
+
  end
 end
