@@ -90,4 +90,12 @@ class TicTacToe
       return false
     end
   end
+
+  def over?
+    if won? || full? || draw?
+      return true 
+    else 
+      return false 
+    end 
+  end
 end
