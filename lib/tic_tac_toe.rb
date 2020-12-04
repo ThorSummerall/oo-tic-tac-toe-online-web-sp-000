@@ -74,5 +74,6 @@ class TicTacToe
        win_combination
      end
    end
+   return false
  end
 end
